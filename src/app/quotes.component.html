@@ -1,0 +1,10 @@
+<div *ngIf="quotes">
+  <ul>
+    <li *ngFor="let quote of quotes">
+      <h2>{{quote.title}}</h2>
+      <p>{{quote.body}}</p>
+      <h4>{{quote.price | currency:"USD":true}}</h4>
+      <a (click)="gotoDetail()" [routerLink]="['/quotes', quote.id]"><button>View Quote Details</button></a>
+    </li>
+  </ul>
+</div>
