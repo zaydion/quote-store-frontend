@@ -2,7 +2,7 @@
   <h3>{{quote.title}}</h3>
   <p>Body: {{quote.body}}</p>
   <p>Size: {{quote.size}}</p>
-  <p>Price: {{quote.price | currency:"USD":true}}</p>
+  <p>Price: {{(quote.price || 0) | currency:"USD":true}}</p>
   <button (click)="buyQuote(quote)">Purchase</button>
   <button (click)="deleteQuote(quote)">Delete Quote</button>
   <button (click)="goBack()">Back</button>

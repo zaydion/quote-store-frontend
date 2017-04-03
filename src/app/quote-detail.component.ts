@@ -39,7 +39,12 @@ export class QuoteDetailComponent implements OnInit {
   }
 
   deleteQuote(quote) {
-    alert("Oh no! You've just deleted: " + quote.title + " :(");
+    confirmedDelete = confirm("Are you sure?");
+
+    if(confirmedDelete) {
+      this.quoteService.delete(this.quote)
+        .then(() => this.goBack());
+    }
   }
 
   goBack(): void {
