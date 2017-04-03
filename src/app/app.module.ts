@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes.component';
 import { QuoteDetailComponent } from './quote-detail.component';
 import { QuoteService } from './quote.service';
+import { NewQuoteComponent } from './new-quote/new-quote.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -14,7 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [
     AppComponent,
     QuotesComponent,
-    QuoteDetailComponent
+    QuoteDetailComponent,
+    NewQuoteComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +25,6 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule
   ],
   providers: [ QuoteService ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
