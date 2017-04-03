@@ -1,14 +1,20 @@
-<div *ngIf="quotes">
-  <ul>
-    <li *ngFor="let quote of quotes">
-      <h2>{{quote.title}}</h2>
-      <p>{{quote.body}}</p>
-      <h4>{{quote.price | currency:"USD":true}}</h4>
-      <a (click)="gotoDetail()" [routerLink]="['/quotes', quote.id]"><button>View Quote Details</button></a>
-    </li>
-  </ul>
+<div *ngIf="quotes" class="row">
+  <div *ngFor="let quote of quotes" class="col s12 m6">
+    <div class="card blue white-text">
+      <div class="card-content">
+        <h3 class="quote-title">{{quote.title}}</h3>
+        <p>{{quote.body}}</p>
+        <h5>{{quote.price | currency:"USD":true}}</h5>
+      </div>
+      <div>
+        <a class="btn white blue-text" (click)="gotoDetail()" [routerLink]="['/quotes', quote.id]">View Quote Details</a>
+      </div>
+    </div>
+  </div>
 </div>
 
+
+
 <div>
-  <a (click)="gotoCreate()" routerLink="quote/new">Create A New Quote</a>
+  <a class="btn green" (click)="gotoCreate()" routerLink="quote/new">Create A New Quote</a>
 </div>

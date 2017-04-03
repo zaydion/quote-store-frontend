@@ -3,17 +3,17 @@
   <p>Body: {{quote.body}}</p>
   <p>Size: {{quote.size}}</p>
   <p>Price: {{(quote.price || 0) | currency:"USD":true}}</p>
-  <button (click)="buyQuote(quote)">Purchase</button>
-  <button (click)="deleteQuote(quote)">Delete Quote</button>
-  <button (click)="goBack()">Back</button>
+  <button class="btn green" (click)="buyQuote(quote)">Purchase</button>
+  <button class="btn red" (click)="deleteQuote(quote)">Delete Quote</button>
+  <button class="btn black" (click)="goBack()">Back</button>
 
   <div>
   <h1>Edit Quote:</h1>
     <form>
-      title: <input type="text" name="title" [(ngModel)]="quote.title" placeholder="title"/>
-      body: <input type="text" name="body" [(ngModel)]="quote.body" placeholder="body"/>
-      price: <input type="text" name="price" [(ngModel)]="quote.price" placeholder="price"/>
-      <input type="submit" name="save" value="Save" (click)="updateQuote()">
+      Title: <input type="text" name="title" [(ngModel)]="quote.title" placeholder="title"/>
+      Body: <input type="text" name="body" [(ngModel)]="quote.body" placeholder="body"/>
+      Price: <input type="text" name="price" [(ngModel)]="quote.price" placeholder="price"/>
+      <input class="btn blue" type="submit" name="save" value="Save" (click)="updateQuote()">
     </form>
   </div>
 </div>
