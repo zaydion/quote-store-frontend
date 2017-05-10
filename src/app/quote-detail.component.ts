@@ -11,7 +11,9 @@ import { QuoteService } from './quote.service';
 
 @Component({
   selector: 'quote-detail',
-  templateUrl: './quote-detail.component.html'
+  templateUrl: './quote-detail.component.html',
+  styleUrls: ['./quote-detail.component.css']
+
 })
 
 export class QuoteDetailComponent implements OnInit {

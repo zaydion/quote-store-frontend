@@ -1,0 +1,9 @@
+.card-content {
+  min-height: 400px;
+  overflow: scroll;
+}
+
+.view_detail_btn {
+  text-align: center;
+  padding: 1em;
+}

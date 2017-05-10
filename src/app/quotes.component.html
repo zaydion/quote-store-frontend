@@ -1,4 +1,4 @@
-<div *ngIf="quotes" class="row">
+<div *ngIf="quotes" class="container row">
   <div *ngFor="let quote of quotes" class="col s12 m6">
     <div class="card blue white-text">
       <div class="card-content">
@@ -6,7 +6,7 @@
         <p>{{quote.body}}</p>
         <h5>{{quote.price | currency:"USD":true}}</h5>
       </div>
-      <div>
+      <div class="view_detail_btn">
         <a class="btn white blue-text" (click)="gotoDetail()" [routerLink]="['/quotes', quote.id]">View Quote Details</a>
       </div>
     </div>
