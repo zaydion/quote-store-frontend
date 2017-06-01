@@ -4,9 +4,11 @@
     <p>Body: {{quote.body}}</p>
     <p>Size: {{quote.size}}</p>
     <p>Price: {{(quote.price || 0) | currency:"USD":true}}</p>
-    <button class="btn green" (click)="buyQuote(quote)">Purchase</button>
-    <button class="btn red" (click)="deleteQuote(quote)">Delete Quote</button>
-    <button class="btn black" (click)="goBack()">Back</button>
+    <div class="hero_detail_btns">
+      <button class="btn green" (click)="buyQuote(quote)">Purchase</button>
+      <button class="btn red" (click)="deleteQuote(quote)">Delete Quote</button>
+      <button class="btn black" (click)="goBack()">Back</button>
+    </div>
   </div>
 
   <div class="edit_form quote_section">

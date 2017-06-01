@@ -7,3 +7,9 @@
   text-align: center;
   padding: 1em;
 }
+
+.new_quote_btn {
+  display: flex;
+  justify-content: center;
+  margin: 4em;
+}

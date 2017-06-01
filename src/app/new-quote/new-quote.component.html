@@ -1,29 +1,11 @@
 <div class="container">
   <h1>New Quote</h1>
 
-  <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s6">
-          <input type="text" name="title" [(ngModel)]="quote.title" placeholder="Title"/>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <textarea type="text" name="body" [(ngModel)]="quote.body" placeholder="Body"></textarea>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <input type="text" name="size" [(ngModel)]="quote.size" placeholder="Full"/>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <input type="number" name="price" [(ngModel)]="quote.price" placeholder="price"/>
-        </div>
-      </div>
-      <input class="btn green" type="submit" name="save" value="Create Quote" (click)="createQuote()">
-    </form>
-  </div>
+  <form class="new_quote_form">
+    <input type="text" name="title" [(ngModel)]="quote.title" placeholder="Title"/>
+    <textarea type="text" name="body" [(ngModel)]="quote.body" placeholder="Body"></textarea>
+    <input type="text" name="size" [(ngModel)]="quote.size" placeholder="Full"/>
+    <input type="number" name="price" [(ngModel)]="quote.price" placeholder="Price"/>
+    <input class="btn green" type="submit" name="save" value="Create Quote" (click)="createQuote()">
+  </form>
 </div>
